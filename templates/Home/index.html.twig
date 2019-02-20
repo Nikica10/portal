@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    {{ include('Includes/navbar.html.twig') }}
+    <div class="container">
+        <div class="row">
+            {% if sport is not empty %}
+                {% for sport in sport %}
+
+                    <div class="col-sm">
+                        <h3>{{ sport.title }}</h3>
+                        <p>{{ sport.content }}</p>
+                        <small>{{ sport.author }}</small>
+                        <small>{{ sport.category }}</small>
+                    </div>
+
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="row">
+            {% if news is not empty %}
+                {% for news in news %}
+
+                    <div class="col-sm">
+                        <h3>{{ news.title }}</h3>
+                        <p>{{ news.content }}</p>
+                        <small>{{ news.author }}</small>
+                        <small>{{ news.category }}</small>
+                    </div>
+
+                {% endfor %}
+            {% endif %}
+        </div>
+
+    </div>
+{% endblock %}

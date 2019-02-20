@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    {{ include('Includes/navbar.html.twig') }}
+    <div class="container">
+        <div class="row">
+            {% if article is not empty %}
+                {% for article in article %}
+
+                    <div class="col-sm">
+                        <h3>{{ article.title }}</h3>
+                        <p>{{ article.content }}</p>
+                        <small>{{ article.author }}</small>
+                    </div>
+
+                {% endfor %}
+            {% endif %}
+        </div>
+
+
+
+    </div>
+{% endblock %}

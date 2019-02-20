@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ include('Includes/adminNavbar.html.twig') }}
+
+
+
+    <div class="container">
+
+        {{ form_start(form) }}
+
+        {{ form_label(form.name) }}
+        {{ form_errors(form.name) }}
+        {{ form_widget(form.name) }}
+
+
+        {{ form_end(form) }}
+
+    </div>
+
+{% endblock %}

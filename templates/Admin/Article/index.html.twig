@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    {{ include('Includes/adminNavbar.html.twig') }}
+
+        {% if articles is not empty %}
+
+            <div class="container">
+                <table>
+
+                    {% for article in articles %}
+
+                        <tr>
+                            <td><h3>{{ article.title }}</h3></td>
+                            <td>
+                                <a href="{{ path('editArticle', {'id' : article.id}) }}" class="btn btn-primary">Edit Article</a>
+                                <a href="{{ path('deleteArticle', {'id' : article.id}) }}" class="btn btn-danger">Delete Article</a>
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+
+                </table>
+            </div>
+
+        {% endif %}
+
+{% endblock %}

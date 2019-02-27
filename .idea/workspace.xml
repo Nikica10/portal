@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0eb9211-6473-48cf-9177-6e99667a85ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminArticleCategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminArticleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminHomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ArticleCategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ArticleType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/category/categoryEdit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/category/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home/single.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Admin/Article/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Admin/Article/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Admin/Article/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Admin/Article/newCategory.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/article/newCategory.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home/category.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home/single.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/category.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Includes/adminNavbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Includes/adminNavbar.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="d0eb9211-6473-48cf-9177-6e99667a85ea" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +222,7 @@
       <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="10" />
     <option name="width" value="1710" />
     <option name="height" value="1038" />
@@ -386,12 +364,12 @@
       <workItem from="1551019841643" duration="11648000" />
       <workItem from="1551115356380" duration="797000" />
       <workItem from="1551199016978" duration="48000" />
-      <workItem from="1551290917496" duration="2648000" />
+      <workItem from="1551290917496" duration="2696000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74609000" />
+    <option name="totallyTimeSpent" value="74657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="0" width="1368" height="830" extended-state="0" />

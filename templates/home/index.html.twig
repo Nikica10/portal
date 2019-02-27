@@ -8,7 +8,7 @@
                 {% for sport in sport %}
 
                     <div class="col-sm">
-                        <h3>{{ sport.title }}</h3>
+                        <h3><a href="{{ path('singleArticle', {'id': sport.id}) }}">{{ sport.title }}</a> </h3>
                         <p>{{ sport.content }}</p>
                         <small>{{ sport.author }}</small>
                         <small>{{ sport.category }}</small>
@@ -23,7 +23,7 @@
                 {% for news in news %}
 
                     <div class="col-sm">
-                        <h3>{{ news.title }}</h3>
+                        <h3><a href="{{ path('singleArticle', {'id': news.id}) }}">{{ news.title }}</a> </h3>
                         <p>{{ news.content }}</p>
                         <small>{{ news.author }}</small>
                         <small>{{ news.category }}</small>

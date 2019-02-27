@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    {{ include('Includes/adminNavbar.html.twig') }}
+
+    {% if category is not empty %}
+
+        <div class="container">
+            <table>
+
+                {% for category in category %}
+
+                    <tr>
+                        <td><h3>{{ category.name }}</h3></td>
+                        <td>
+                            <a href="{{ path('editCategory', {'id' : category.id}) }}" class="btn btn-primary">Edit Article</a>
+                            <a href="{{ path('deleteCategory', {'id' : category.id}) }}" class="btn btn-danger">Delete Article</a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+
+            </table>
+        </div>
+
+    {% endif %}
+
+{% endblock %}

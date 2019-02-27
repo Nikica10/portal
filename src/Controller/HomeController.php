@@ -9,30 +9,36 @@
 namespace App\Controller;
 
 use App\Entity\Article;
-use App\Repository\ArticleRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-
-
 
 
 class HomeController extends AbstractController
 {
+    private $em;
+
+    /**
+     * HomeController Constructor
+     * @param EntityManagerInterface $entityManager
+     */
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->em = $entityManager;
+    }
+
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(EntityManagerInterface $em)
+    public function indexAction()
     {
-        $category = 2;
-        $repository = $em->getRepository(Article::class);
-        $news = $repository->findByCategory($category);
+        $categoryID = 2;
+        $repository = $this->em->getRepository(Article::class);
+        $news = $repository->findByCategory($categoryID);
 
-        $category = 1;
-        $repository = $em->getRepository(Article::class);
-        $sport = $repository->findByCategory($category);
+        $categoryID = 1;
+        $repository = $this->em->getRepository(Article::class);
+        $sport = $repository->findByCategory($categoryID);
 
 
         return $this->render('Home/index.html.twig', array(
@@ -41,56 +47,16 @@ class HomeController extends AbstractController
         ));
     }
 
-//    /**
-//     * @Route("/category/{$name}", name="categorypage")
-//     */
-//    public function categoryAction(Request $request, $name)
-//    {
-//
-//
-//        $category = $this->getDoctrine()
-//            ->getRepository(Article::class)
-//            ->findBy($name);
-//
-//        return $this->render('Home/category.html.twig', array(
-//            'category' => $category
-//        ));
-//    }
-
     /**
-     * @Route("category/{$name}", name="category_article")
-     * @param $name
-     * @return Response
+     * @Route("/single/{id}", name="singleArticle")
      */
-    public function categoryArticleAction(Request $request, $name)
+    public function singleArticle($id)
     {
+        $singleArticle = $this->em->getRepository(Article::class)->findOneBy(['id'=>$id]);
 
-        $category = $this->getDoctrine()
-            ->getRepository(Article::class)
-            ->findBy(['category' => $name]);
-
-
-
-//dump($category);die();
-
-        return $this->render('Home/category.html.twig', array(
-            'category' => $category
+        return $this->render('home/single.html.twig', array(
+            'article' => $singleArticle
         ));
     }
 
-    /**
-     * @Route("/single/{$id}", name="categorypage")
-     * @param $id
-     * @return Response
-     */
-    public function singleArticleAction(Request $request, $id)
-    {
-        $article = $this->getDoctrine()
-            ->getRepository(Article::class)
-            ->findOneBy(['id' => $id]);
-
-        return $this->render('Home/single.html.twig', array(
-            'article' => $article
-        ));
-    }
 }
